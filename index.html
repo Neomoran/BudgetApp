@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Budget calculator</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <div class="calcBtn">
+        <button id="modalBtn" class="button">Open calculator</button>
+    </div>
+    <div id="simpleModal" class="modal">
+      <div class="modalContent">
+        <div class="modalHeader">
+          <span class="closeBtn" id="closeBtn">&times;</span>
+         
+        </div>
+        <div class="modalBody">
+          <div class="calc">
+              <section class="calculator">
+        <!-- screen -->
+        <form>
+            <input type="text" name="" id="" class="screen">
+        </form>
+        <!-- buttons -->
+        <div class="buttons">
+            <div class="firstRow">
+                <button class="btnA" type="button" data-num="9">9</button>
+                <button class="btnA" type="button" data-num="8">8</button>
+                <button class="btnA" type="button" data-num="7">7</button>
+                <button class="btnA" type="button" data-num="+">+</button>
+            </div>
+            <div class="secondRow">
+                <button class="btnA" type="button" data-num="6">6</button>
+                <button class="btnA" type="button" data-num="5">5</button>
+                <button class="btnA" type="button" data-num="4">4</button>
+                <button class="btnA" type="button" data-num="-">-</button>
+            </div>
+            <div class="thirdRow">
+                <button class="btnA" type="button" data-num="3">3</button>
+                <button class="btnA" type="button" data-num="2">2</button>
+                <button class="btnA" type="button" data-num="1">1</button>
+                <button class="btnA" type="button" data-num="*">x</button>
+            </div>
+            <div class="fourthRow">
+                <button class="btnA" type="button" data-num=".">.</button>
+                <button class="btnA" type="button" data-num="0">0</button>
+                <button class="btn-equal" type="button">=</button>
+                <button class="btnA" type="button" data-num="/">/</button>
+            </div>
+            <div class="fifthRow">
+                <button class="btnA" type="button" data-num="%">%</button>
+                <button class="btn-clear" type="button">CE</button>
+            </div>
+        </div>
+    </section>
+          </div>
+        </div>
+        
+
+
+      </div>
+    </div>
+
+
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-11 mx-auto pt-3">
+                <!-- title -->
+                <h3 class=" mb-2">My Budget calculator</h3>
+                <div class="row">
+                    <div class="col-md-5 my-3">
+                        <!-- Budget feedback -->
+                        <div class="budget-feedback alert alert-danger text-capitalize">budget feedback</div>
+                        <!-- budget form -->
+                        <form id="budget-form" class="budget-form">
+                            <h5 class="text-capitalize">Enter Amount To Budget</h5>
+                            <div class="form-group">
+                                <input type="number" class="form-control budget-input" id="budget-input">
+                            </div>
+                            <!-- submit button -->
+                            <button type="submit" class="btn text-capitalize budget-submit" id="budget-submit">Calculate</button>
+                        </form>
+                    </div>
+                    <div class="col-md-7">
+                        <!-- App info -->
+                        <div class="row my-3">
+                            <div class="col-4 text-center mb-2">
+                                <h6 class=" info-title">Budget</h6>
+                                <span class="budget-icon"><i class="fas fa-money-bill-wave"></i></span>
+                                <h4 class="mt-2 budget" id="budget"><span>Kes.</span><span id="budget-amount">0</span></h4>
+                            </div>
+                            <div class="col-4 text-center">
+                                <h6 class=" info-title"> Expenses</h6>
+                                <span class="expense-icon"><i class="far fa-credit-card"></i></span>
+                                <h4 class="mt-2 expense" id="expense"><span>Kes.</span><span id="expense-amount">0</span></h4>
+                            </div>
+                            <div class="col-4 text-center">
+                                <h6 class=" info-title">Balance</h6>
+                                <span class="balance-icon"><i class="fas fa-hand-holding-usd"></i></span>
+                                <h4 class="mt-2 balance" id="balance"> <span>Kes.</span><span id="balance-amount">0</span></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-5 my-3">
+                        <!-- expense feedback -->
+                        <div class="expense-feedback alert alert-danger text-capitalize">expense feedback</div>
+                        <!-- expense form -->
+                        <form id="expense-form" class="expense-form">
+                            <h5 class="text-capitalize">Enter type of expense</h5>
+                            <p class="text-dark">
+                                <marquee behavior="" direction="left">E.g Medical, education, food, rent
+                                    e.t.c</marquee>
+                            </p>
+                            <div class="form-group">
+                                <input type="text" class="form-control expense-input" id="expense-input">
+                            </div>
+                            <h5 class="text-capitalize">Enter cost of expense</h5>
+                            <div class="form-group">
+                                <input type="number" class="form-control expense-input" id="amount-input">
+                            </div>
+                            <!-- submit button -->
+                            <button type="submit" class="btn text-capitalize expense-submit" id="expense-submit">Add
+                                expense</button>
+                        </form>
+                    </div>
+                    <div class="col-md-7 my-3">
+                        <!-- expense-list -->
+                        <div class="expense-list" id="expense-list">
+                            <div class="expense-list__info d-flex justify-content-between text-capitalize">
+                                <h5 class="list-item">expense type</h5>
+                                <h5 class="list-item">expense cost</h5>
+                                <h5 class="list-item"></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/fontawesome-all.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
